@@ -1,0 +1,13 @@
+try {
+			ps= connection.prepareStatement(sql);
+		} catch (SQLException e) {
+			System.out.println(" Error at addEmployee Dao method : "+e);
+		}finally {
+			if(ps!=null) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					System.out.println(" Error at addEmployee Dao method : "+e);
+				}
+			}
+		}
